@@ -10,7 +10,8 @@ def get_requirements(file_path: str) -> List[str]:
         with open(file_path, 'r') as file:
             requirements = file.read().splitlines()
             # Filter out editable installs (e.g., -e . or -e git+...)
-            requirements = [req for req in requirements if req and not req.startswith('-e')]            return requirements
+            requirements = [req for req in requirements if req and not req.startswith('-e')]           
+            return requirements
     except FileNotFoundError as e:
         print(f"Error reading requirements file: {e}")
         return []
