@@ -1,23 +1,19 @@
 from setuptools import find_packages, setup
 from typing import List
-# from networksecurity.logging import logging
-# from networksecurity.exception import custom_exception
+
 
 def get_requirements(file_path: str) -> List[str]:
     
+
     try:
+        # Reading requirements from file_path
         with open(file_path, 'r') as file:
             requirements = file.read().splitlines()
-            #handle -e.
-            requirements = [req for req in requirements if req and not req.startswith('-e.')]
-            return requirements
-
-    except FileNotFoundError:
-        print(f"Requirements file not found: {file_path}")
+            # Filter out editable installs (e.g., -e . or -e git+...)
+            requirements = [req for req in requirements if req and not req.startswith('-e')]            return requirements
+    except FileNotFoundError as e:
+        print(f"Error reading requirements file: {e}")
         return []
-    # except custom_exception as e:
-    #     print(f"Error reading requirements file: {e}")
-    #     return []
 
 setup(
     name='networksecurity',
