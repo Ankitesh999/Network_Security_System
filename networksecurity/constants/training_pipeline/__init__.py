@@ -1,8 +1,3 @@
-import os
-import sys
-import numpy as np
-import pandas as pd     
-
 #Common constants
 TARGET_COLUMN: str = "Result"
 PIPELINE_NAME: str = "network_security_pipeline"
