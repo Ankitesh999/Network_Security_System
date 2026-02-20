@@ -6,7 +6,7 @@ TARGET_COLUMN: str = "Result"
 PIPELINE_NAME: str = "network_security_pipeline"
 ARTIFACT_DIR: str = "artifacts"
 FILE_NAME: str = "phishingDataset.csv"
-SCHEMA_FILE_PATH: str = os.path.join("data_schema", "schema.yaml")
+SCHEMA_FILE_PATH: str = os.path.join("networksecurity", "data_schema", "schema.yaml")
 
 TRAIN_FILE_NAME: str = "train.csv"
 TEST_FILE_NAME: str = "test.csv"
