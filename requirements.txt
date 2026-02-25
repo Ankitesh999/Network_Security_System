@@ -4,6 +4,5 @@ certifi
 python-dotenv
 pymongo[srv]==3.12
 scikit-learn
-dill
 pyyaml
 -e .

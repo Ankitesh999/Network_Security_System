@@ -1,12 +1,13 @@
-#Common constants
 import os
+import numpy as np
 
-
+#Common constants
 TARGET_COLUMN: str = "Result"
 PIPELINE_NAME: str = "network_security_pipeline"
 ARTIFACT_DIR: str = "artifacts"
 FILE_NAME: str = "phishingDataset.csv"
 SCHEMA_FILE_PATH: str = os.path.join("networksecurity", "data_schema", "schema.yaml")
+PREPROCESSING_OBJECT_FILE_NAME: str = "preprocessing.pkl"
 
 TRAIN_FILE_NAME: str = "train.csv"
 TEST_FILE_NAME: str = "test.csv"
@@ -25,3 +26,15 @@ DATA_VALIDATION_VALID_DIR: str = "valid"
 DATA_VALIDATION_INVALID_DIR: str = "invalid"
 DATA_VALIDATION_DRIFT_REPORT_DIR: str = "drift_report"
 DRIFT_REPORT_FILE_NAME: str = "drift_report.yaml"
+
+#Data Transformation 
+
+DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
+DATA_TRANSFORMATION_TRANSFORMED_DIR: str = "transformed"
+DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
+
+DATA_TRANSFORMATION_IMPUTER_PARAMS: dict = {
+    'missing_values': np.nan,
+    'n_neighbors': 3,
+    'weights': 'uniform',
+}
