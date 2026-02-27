@@ -8,7 +8,7 @@ ARTIFACT_DIR: str = "artifacts"
 FILE_NAME: str = "phishingDataset.csv"
 SCHEMA_FILE_PATH: str = os.path.join("networksecurity", "data_schema", "schema.yaml")
 PREPROCESSING_OBJECT_FILE_NAME: str = "preprocessing.pkl"
-SAVE_MODEL_DIR: str = "saved_models"
+SAVE_MODEL_DIR: str = "final_model"
 
 TRAIN_FILE_NAME: str = "train.csv"
 TEST_FILE_NAME: str = "test.csv"
@@ -46,3 +46,5 @@ MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
 MODEL_FILE_NAME: str = "model.pkl"
 MODEL_TRAINER_EXPECTED_ACCURACY: float = 0.6
 MODEL_TRAINER_OVERFITTING_UNDERFITTING_THRESHOLD: float = 0.05
+
+AWS_BUCKET_NAME: str = "networksecuritypred"
