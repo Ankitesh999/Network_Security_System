@@ -95,3 +95,4 @@ jobs:
       - name: Clean previous images and containers
         run: |
          docker system prune -f
+         docker ps -q --filter "name=networksecurity" | grep -q . && docker stop networksecurity && docker rm -fv networksecurity
